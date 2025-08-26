@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: dyir67dwt-nodejs-gitops
+  description: This is GitOps manifest for dyir67dwt-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=dyir67dwt-nodejs
+    backstage.io/kubernetes-id: dyir67dwt-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: dyir67dwt-nodejs
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:dyir67dwt-nodejs
